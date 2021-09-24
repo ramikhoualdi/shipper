@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 const Navbar = () => {
@@ -11,10 +12,10 @@ const Navbar = () => {
                     <div className="custom-menu" >
                         <ul>
                             <li>
-                                <a href="#" >En</a>
+                                <Link to="/shipper" >Shipper</Link>
                             </li>
                             <li>
-                                <a href="#" >Fr</a>
+                                <Link to="/carrier" >Carrier</Link>
                             </li>
                         </ul>
                     </div>
@@ -22,19 +23,19 @@ const Navbar = () => {
                         <div>
                             <ul>
                                 <li>
-                                    <a href="#" >Logistics</a>
+                                    <Link to="/logistics" >Logistics</Link>
                                 </li>
                                 <li>
-                                    <a href="#" >Services</a>
+                                    <Link to="/services" >Services</Link>
                                 </li>
                                 <li>
-                                    <a href="#" >News</a>
+                                    <Link to="/news" >News</Link>
                                 </li>
                                 <li>
-                                    <a href="#" >About</a>
+                                    <Link to="/about" >About</Link>
                                 </li>
                                 <li>
-                                    <a href="#" >Contact</a>
+                                    <Link to="/contact" >Contact</Link>
                                 </li>
                             </ul>
                         </div>
@@ -45,7 +46,7 @@ const Navbar = () => {
                         <span></span>
                     </div>
                     <div className="navbar-button" >
-                        <a href="#" >GET A QUOTE</a>
+                        <Link to="/" >GET A QUOTE</Link>
                     </div>
                 </div>
             </div>            

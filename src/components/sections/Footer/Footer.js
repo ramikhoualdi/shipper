@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 const Footer = () => {
@@ -11,10 +12,11 @@ const Footer = () => {
                                 <figure className="logo" >
                                     <img 
                                         src="http://qesco.themezinho.net/wp-content/themes/qesco/images/logo.png"
+                                        alt=""
                                     />
                                 </figure>
                                 <p>+1 (850) 344 0 66<br/>
-                                <a href="#">sales@qesco.co.uk</a></p>
+                                <Link to="/">sales@qesco.co.uk</Link></p>
                                 <p>2075 Brandon Trail Alpharetta, <br/>
                                 London - UK</p>
                             </div>
@@ -26,19 +28,19 @@ const Footer = () => {
                             <div className="textwidget custom-html-widget" >
                                 <ul className="footer-menu" >
                                     <li>
-                                        <a href="" >Air Freight</a>
+                                        <Link to="/about" >Air Freight</Link>
                                     </li>
                                     <li>
-                                        <a href="" >Sea Freight</a>
+                                        <Link to="/about" >Sea Freight</Link>
                                     </li>
                                     <li>
-                                        <a href="" >Ground Cargo</a>
+                                        <Link to="/about" >Ground Cargo</Link>
                                     </li>
                                     <li>
-                                        <a href="" >Packaging Options</a>
+                                        <Link to="/about" >Packaging Options</Link>
                                     </li>
                                     <li>
-                                        <a href="" >Track Your Shipment</a>
+                                        <Link to="/about" >Track Your Shipment</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -57,7 +59,7 @@ const Footer = () => {
                     <div className="col-12" >
                         <div className="footer-bottom" >
                             <span>© 2021 Qesco | Shipping Company</span>
-                            <span> Site created by <a href="#">Allied Technologies</a> </span>
+                            <span> Site created by <Link to="/">Allied Technologies</Link> </span>
                         </div>
                     </div>
                 </div>

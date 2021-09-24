@@ -4,6 +4,7 @@ FaFacebookF,
 FaTwitter,
 FaLinkedin,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
     return (
@@ -11,32 +12,32 @@ const Topbar = () => {
             <div className="container" >
                 <div className="phone" >
                     <span>Call Us Now:</span>
-                    <a href="#" >+1 (123) 123 0 12</a>
+                    <Link to="/" >+1 (123) 123 0 12</Link>
                 </div>
                 <div className="email" >
                     Email: 
-                    <a href="#" >sales@sales.com</a>
+                    <Link to="/" >sales@sales.com</Link>
                 </div>
                 <div className="social-media" >
                     <span>Follow us</span>
                     <ul>
                         <li>
-                            <a href="#" >
+                            <Link to="www.facebook.com" >
                                 <FaFacebookF style={{ color:'black', fontSize: '14px' }} />
                                 <span>Facebook</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" >
+                            <Link to="www.twitter.com" >
                                 <FaTwitter style={{ color:'black', fontSize: '14px' }} />
                                 <span>Twitter</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" >
+                            <Link to="www.linkedin.com" >
                                 <FaLinkedin style={{ color:'black', fontSize: '14px' }} />
                                 <span>Linkedin</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

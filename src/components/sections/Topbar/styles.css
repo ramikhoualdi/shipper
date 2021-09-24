@@ -20,6 +20,15 @@
     color: var(--color-dark);
     border-bottom: 3px solid var(--color-main);
     line-height: 1;
+    -webkit-transition: all .35s ease-in-out;
+    -moz-transition: all .30s ease-in-out;
+    -ms-transition: all .30s ease-in-out;
+    -o-transition: all .30s ease-in-out;
+    transition: all .30s ease-in-out;
+}
+.topbar .phone a:hover {
+    color: var(--color-main);
+    text-decoration: none;
 }
 .topbar .email {
     display: inline-block;
@@ -30,6 +39,15 @@
     color: var(--color-dark);
     border-bottom: 3px solid var(--color-main);
     line-height: 1;
+    -webkit-transition: all .35s ease-in-out;
+    -moz-transition: all .30s ease-in-out;
+    -ms-transition: all .30s ease-in-out;
+    -o-transition: all .30s ease-in-out;
+    transition: all .30s ease-in-out;
+}
+.topbar .email a:hover {
+    color: var(--color-main);
+    text-decoration: none;
 }
 .topbar .social-media {
     display: inline-block;
