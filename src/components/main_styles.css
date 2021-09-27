@@ -2501,7 +2501,7 @@ button[type="submit"] i {
   transition: box-shadow 0.3s ease;
   -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  -webkit-transform: scale(1);
+  transform: scale(1);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
   border: 2px solid var(--color-dark);
   background: none;
@@ -4447,13 +4447,13 @@ button[type="submit"] i {
   width: 100%;
 }
 
-.logged-in.admin-bar .navbar {
-  /*margin-top: 32px;*/
+/* .logged-in.admin-bar .navbar {
+  margin-top: 32px;
 }
 
 .logged-in.admin-bar .topbar {
-  /*margin-top: 32px; */
-}
+  margin-top: 32px;
+} */
 
 .search-no-results .content-section {
   text-align: center;
@@ -6758,9 +6758,9 @@ table tr td {
   color: #fff;
 }
 
-.footer-widget .widget-title {
-  /*width: 100%; display: block; margin-bottom: 20px;*/
-}
+/* .footer-widget .widget-title {
+  width: 100%; display: block; margin-bottom: 20px;
+} */
 
 .footer-widget .screen-reader-text {
   display: none;
