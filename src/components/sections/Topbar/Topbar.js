@@ -23,19 +23,19 @@ const Topbar = () => {
                     <ul>
                         <li>
                             <Link to="www.facebook.com" >
-                                <FaFacebookF style={{ color:'black', fontSize: '14px' }} />
+                                <FaFacebookF style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                                 <span>Facebook</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="www.twitter.com" >
-                                <FaTwitter style={{ color:'black', fontSize: '14px' }} />
+                                <FaTwitter style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                                 <span>Twitter</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="www.linkedin.com" >
-                                <FaLinkedin style={{ color:'black', fontSize: '14px' }} />
+                                <FaLinkedin style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                                 <span>Linkedin</span>
                             </Link>
                         </li>

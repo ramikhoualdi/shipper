@@ -1,0 +1,91 @@
+.main{
+    margin: 100px 0;
+}
+.wpb_wrapper {
+    height: 100%;
+}
+.track-shipping-form {
+    width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--color-main);
+    position: relative;
+    padding: 0 50px;
+}
+.track-shipping-form:before {
+    content: "";
+    width: 90px;
+    height: 50%;
+    background: var(--color-dark);
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    transform: skewX(
+13deg);
+}
+.track-shipping-form .inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+.track-shipping-form .inner h3 {
+    width: 100%;
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.track-shipping-form .inner .form-group {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.track-shipping-form .inner input[type="text"] {
+    border: none;
+    width: 100%;
+    margin-top: 5px;
+}
+input[type="text"] {
+    width: 420px;
+    max-width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    border: 1px solid #cecece;
+}
+.track-shipping-form .inner .form-group:last-child {
+    margin-bottom: 0;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+button[type="submit"] {
+    height: 60px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--color-dark);
+    border: none;
+    padding: 0 40px;
+}
+button[type="submit"] i {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 18px;
+    transform: translateY(2px);
+}
+.track-shipping-form:after {
+    content: "";
+    width: 200px;
+    height: 100%;
+    background: var(--color-main);
+    position: absolute;
+    right: -50px;
+    top: 0;
+    transform: skewX(
+-13deg);
+}
