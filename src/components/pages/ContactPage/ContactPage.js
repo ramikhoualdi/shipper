@@ -12,7 +12,7 @@ const ContactPage = () => {
             <header 
                 className="page-header" 
                 style={{ 
-                    backgroundImage: 'url(http://qesco.themezinho.net/wp-content/uploads/2020/10/page-header-bg.jpg)', 
+                    backgroundImage: `url(${ process.env.PUBLIC_URL + '/images/page-header-bg.jpg'})`, 
                     // backgroundPosition: '0px -33px',
                 }}
             >
@@ -32,7 +32,7 @@ const ContactPage = () => {
                                         <div className="section-title" style={{ color: '#212223', }}>
 	 	                                    <figure>
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                                                    src={process.env.PUBLIC_URL + '/images/section-title-shape.png'}
                                                     alt="alt"
                                                 />
                                             </figure>

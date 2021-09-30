@@ -40,7 +40,7 @@ const AboutPage = () => {
                                                         <div className="section-title" style={{ color: '#212223' }} >
                                                             <figure>
                                                                 <img 
-                                                                    src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                                                                    src={process.env.PUBLIC_URL + '/images/section-title-shape.png'}
                                                                     alt="alt"
                                                                 />
                                                             </figure>
@@ -57,10 +57,10 @@ const AboutPage = () => {
                                             <div className="vc_column-inner vc_custom_1604145657504">
                                                 <div className="wpb_wrapper">
                                                     <div 
-                                                        data-background="http://qesco.themezinho.net/wp-content/uploads/2020/10/section-bg-02.jpg" 
+                                                        data-background={process.env.PUBLIC_URL + '/images/section-bg-02.jpg'} 
                                                         className="image-quote"
                                                         style={{ 
-                                                            background: 'url(http://qesco.themezinho.net/wp-content/uploads/2020/10/section-bg-02.jpg)'
+                                                            background: `url(${process.env.PUBLIC_URL + '/images/section-bg-02.jpg'})`
                                                          }} 
                                                     >
                                                     <div className="quote-box">
@@ -298,7 +298,7 @@ const AboutPage = () => {
                                         <div className="section-title" style={{ color: '#212223' }}>
                                             <figure>
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                                                    src={process.env.PUBLIC_URL + '/images/section-title-shape.png'}
                                                     alt="alt" 
                                                 />
                                             </figure>
@@ -410,7 +410,7 @@ const AboutPage = () => {
                                             <div className="tab-inner">
                                                 <figure>
                                                     <img 
-                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image01.jpg" 
+                                                        src={process.env.PUBLIC_URL + '/images/tab-image01.jpg'}
                                                         alt="Postal"
                                                     />    
                                                 </figure>
@@ -430,7 +430,7 @@ const AboutPage = () => {
                                             <div className="tab-inner">
                                                 <figure>
                                                     <img 
-                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image02.jpg" 
+                                                        src={process.env.PUBLIC_URL + '/images/tab-image02.jpg'}
                                                         alt="Retail" 
                                                     />
                                                 </figure>
@@ -450,7 +450,7 @@ const AboutPage = () => {
                                             <div className="tab-inner">
                                                 <figure>
                                                     <img 
-                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image03.jpg" 
+                                                        src={process.env.PUBLIC_URL + '/images/tab-image03.jpg'} 
                                                         alt="Logistics"
                                                     />
                                                 </figure>
@@ -470,7 +470,7 @@ const AboutPage = () => {
                                             <div className="tab-inner">
                                                 <figure>
                                                     <img 
-                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image04.jpg" 
+                                                        src={process.env.PUBLIC_URL + '/images/tab-image04.jpg'} 
                                                         alt="Ticketing" 
                                                     />
                                                 </figure>
@@ -490,7 +490,7 @@ const AboutPage = () => {
                                             <div className="tab-inner">
                                                 <figure>
                                                     <img 
-                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image05.jpg" 
+                                                        src={process.env.PUBLIC_URL + '/images/tab-image05.jpg'} 
                                                         alt="Industrial"
                                                     />
                                                 </figure>
@@ -510,7 +510,7 @@ const AboutPage = () => {
                                             <div className="tab-inner">
                                                 <figure>
                                                     <img 
-                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image06.jpg" 
+                                                        src={process.env.PUBLIC_URL + '/images/tab-image06.jpg'} 
                                                         alt="Other"
                                                     />
                                                 </figure>
@@ -546,7 +546,7 @@ const AboutPage = () => {
                                                         <div className="section-title" style={{ color: '#212223' }}>
                                                             <figure>
                                                                 <img 
-                                                                    src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                                                                    src={process.env.PUBLIC_URL + '/images/section-title-shape.png'} 
                                                                     alt="alt"
                                                                 />
                                                             </figure>
@@ -565,7 +565,7 @@ const AboutPage = () => {
                                                             <div className="inner">
                                                                 <figure>
                                                                     <img 
-                                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/team-member01.jpg" 
+                                                                        src={process.env.PUBLIC_URL + '/images/team-member01.jpg'} 
                                                                         alt="ALEXANDER RICHIEZ"
                                                                     />
                                                                 </figure>
@@ -584,7 +584,7 @@ const AboutPage = () => {
                                                             <div className="inner">
                                                                 <figure>
                                                                     <img 
-                                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/team-member02.jpg" 
+                                                                        src={process.env.PUBLIC_URL + '/images/team-member02.jpg'}  
                                                                         alt="RICHARD HILL" 
                                                                     />
                                                                 </figure>
@@ -603,7 +603,7 @@ const AboutPage = () => {
                                                             <div className="inner">
                                                                 <figure>
                                                                     <img 
-                                                                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/team-member03.jpg" 
+                                                                        src={process.env.PUBLIC_URL + '/images/team-member03.jpg'} 
                                                                         alt="DYLAN TAYLOR" 
                                                                     />
                                                                 </figure>
@@ -623,7 +623,7 @@ const AboutPage = () => {
                     </div>
                 </section>
                 {/* Section 9 */}
-                <section className="content-section bg-image" style={{ background: 'url(http://qesco.themezinho.net/wp-content/uploads/2020/10/section-bg-02.jpg) center no-repeat' }} >
+                <section className="content-section bg-image" style={{ background: `url(${process.env.PUBLIC_URL + '/images/section-bg-02.jpg'}) center no-repeat` }} >
                     <div className="vc_row row wpb_row vc_row-fluid vc_custom_1604247320751">
                         <div className="wpb_column vc_column_container vc_col-sm-12 col-sm-12">
                             <div className="vc_column-inner vc_custom_1604159363199">
@@ -679,7 +679,7 @@ const AboutPage = () => {
                                                         <div className="section-title" style={{ color: '#212223' }} >
                                                             <figure>
                                                                 <img 
-                                                                    src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                                                                    src={process.env.PUBLIC_URL + '/images/section-title-shape.png'}
                                                                     alt="alt" 
                                                                 />
                                                             </figure>
@@ -696,7 +696,7 @@ const AboutPage = () => {
                                                     <div className="wpb_wrapper">
                                                         <figure className="logo-item ">
                                                             <img 
-                                                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo01.jpg" 
+                                                                src={process.env.PUBLIC_URL + '/images/logo01.jpg'}                                                                
                                                                 alt="alt"
                                                             />
                                                         </figure>
@@ -708,7 +708,7 @@ const AboutPage = () => {
                                                     <div className="wpb_wrapper">
                                                         <figure className="logo-item ">
                                                             <img 
-                                                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo03.jpg" 
+                                                                src={process.env.PUBLIC_URL + '/images/logo03.jpg'} 
                                                                 alt="alt"
                                                             />
                                                         </figure>
@@ -720,7 +720,7 @@ const AboutPage = () => {
                                                     <div className="wpb_wrapper">
                                                         <figure className="logo-item ">
                                                             <img 
-                                                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo02.jpg" 
+                                                                src={process.env.PUBLIC_URL + '/images/logo02.jpg'} 
                                                                 alt="alt"
                                                             />
                                                         </figure>
@@ -732,7 +732,7 @@ const AboutPage = () => {
                                                     <div className="wpb_wrapper">
                                                         <figure className="logo-item ">
                                                             <img 
-                                                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo04.jpg" 
+                                                                src={process.env.PUBLIC_URL + '/images/logo04.jpg'}
                                                                 alt="alt"
                                                             />
                                                         </figure>
@@ -756,7 +756,7 @@ const AboutPage = () => {
                                         <figure className="gallery-item ">
                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item01.jpg" data-fancybox="">
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item01.jpg" 
+                                                    src={process.env.PUBLIC_URL + '/images/gallery-item01.jpg'}
                                                     alt="alt"
                                                 />
                                             </a>
@@ -777,7 +777,7 @@ const AboutPage = () => {
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item01.jpg" data-fancybox=""> </a>
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item02.jpg" data-fancybox="">
                                                                 <img 
-                                                                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item02.jpg" 
+                                                                    src={process.env.PUBLIC_URL + '/images/gallery-item02.jpg'}
                                                                     alt="alt"
                                                                 />
                                                             </a>
@@ -792,7 +792,7 @@ const AboutPage = () => {
                                                         <figure className="gallery-item ">
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item02.jpg" data-fancybox=""> </a>
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item03.jpg" data-fancybox="">
-                                                                <img src="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item03.jpg" alt="alt" />
+                                                                <img src={process.env.PUBLIC_URL + '/images/gallery-item03.jpg'} alt="alt" />
                                                             </a>
                                                         </figure>
                                                         <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item03.jpg" data-fancybox=""> </a>
@@ -805,7 +805,7 @@ const AboutPage = () => {
                                                         <figure className="gallery-item ">
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item03.jpg" data-fancybox=""> </a>
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item04.jpg" data-fancybox="">
-                                                                <img src="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item04.jpg" alt="alt" />
+                                                                <img src={process.env.PUBLIC_URL + '/images/gallery-item04.jpg'} alt="alt" />
                                                             </a>
                                                         </figure>
                                                         <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item04.jpg" data-fancybox=""> </a>
@@ -818,7 +818,7 @@ const AboutPage = () => {
                                                         <figure className="gallery-item ">
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item04.jpg" data-fancybox=""> </a>
                                                             <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item05.jpg" data-fancybox="">
-                                                                <img src="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item05.jpg" alt="alt" />
+                                                                <img src={process.env.PUBLIC_URL + '/images/gallery-item05.jpg'} alt="alt" />
                                                             </a>
                                                         </figure>
                                                         <a href="http://qesco.themezinho.net/wp-content/uploads/2020/10/gallery-item05.jpg" data-fancybox=""> </a>

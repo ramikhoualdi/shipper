@@ -10,7 +10,9 @@ const LogisticsPage = () => {
             <Navbar />
             {/* Section 1 */}
             <header className="page-header" data-stellar-background-ratio="0.7" 
-                style={{ backgroundImage: 'url(http://qesco.themezinho.net/wp-content/uploads/2020/10/page-header-bg.jpg)', backgroundPosition: '0px -33px' }}
+                style={{ 
+                    backgroundImage: `url(${process.env.PUBLIC_URL + '/images/page-header-bg.jpg'})`, 
+                    backgroundPosition: '0px -33px' }}
             >
  
                 <div className="container">
@@ -27,7 +29,7 @@ const LogisticsPage = () => {
 	
 	
 	
-	 	<figure> <img src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" alt="Image_logo"/> </figure>
+	 	<figure> <img src={process.env.PUBLIC_URL + '/images/section-title-shape.png'} alt="Image_logo"/> </figure>
 		
   
 	    <h2>Reliable UK &amp; Ireland Transport<br/>
@@ -38,13 +40,13 @@ Logistics Since 1973</h2>
 <p>With so many options available you can rest assured that we will be able to deliver your consignment, regardless of its size. And if there’s ever a time where you need some advice on choosing the right solution, our transport team, who have more than 120 years’ experience.</p>
  </div>
 <div className="vc_empty_space" style={{ height: '30px' }} ><span className="vc_empty_space_inner"></span></div><figure className="image_logo ">
-    <img src="http://qesco.themezinho.net/wp-content/uploads/2020/11/logistic-image02.jpg" alt="Image_logo"/>
+    <img src={process.env.PUBLIC_URL + '/images/logistic-image02.jpg'} alt="Image_logo"/>
   </figure>
 <div className="vc_empty_space" style={{ height: '30px' }} ><span className="vc_empty_space_inner"></span></div></div></div></div><div className="col-left-spacing wpb_column vc_column_container vc_col-sm-12 col-sm-12 vc_col-md-6 col-md-6"><div className="vc_column-inner"><div className="wpb_wrapper"><figure className="image ">
-    <img src="http://qesco.themezinho.net/wp-content/uploads/2020/11/logistic-image01.jpg" alt="Image_logo"/>
+    <img src={process.env.PUBLIC_URL + '/images/logistic-image01.jpg'} alt="Image_logo"/>
   </figure>
 <div className="vc_empty_space" style={{ height: '30px' }} ><span className="vc_empty_space_inner"></span></div><figure className="image_logo ">
-    <img src="http://qesco.themezinho.net/wp-content/uploads/2020/11/logistic-image03.jpg" alt="Image_logo"/>
+    <img src={process.env.PUBLIC_URL + '/images/logistic-image03.jpg'} alt="Image_logo"/>
   </figure>
 </div></div></div></div></div></div></div></div></div></section><section className="content-section no-spacing" style={{ background: '#f9f7ef' }} ><div className="container"><div className="vc_row row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex"><div className="z-index wpb_column vc_column_container vc_col-sm-6 col-sm-6"><div className="vc_column-inner"><div className="wpb_wrapper">
 
@@ -74,7 +76,7 @@ Services Include:</h2>
 	
 				
 			
-	<img src="http://qesco.themezinho.net/wp-content/uploads/2020/10/side-image02.jpg" alt="Image_logo"/>
+	<img src={process.env.PUBLIC_URL + '/images/side-image02.jpg'} alt="Image_logo"/>
 
 	
 	
@@ -104,7 +106,7 @@ requirements</p>
 	
 	
 
-  <figure> <img src="http://qesco.themezinho.net/wp-content/uploads/2020/11/service-image01.jpg" alt="service-image01"/> </figure>
+  <figure> <img src={process.env.PUBLIC_URL + '/images/service-image01.jpg'} alt="service-image01"/> </figure>
 	    <h6>Full, Part, andConsolidated Loads</h6>
       <p>Our dedicated fleet of vehicles operates nationally throughout the UK delivering both full, part, and consolidated loads.</p>
   		
@@ -115,7 +117,7 @@ requirements</p>
 	
 	
 
-  <figure> <img src="http://qesco.themezinho.net/wp-content/uploads/2020/11/service-image02.jpg" alt="service-image02"/> </figure>
+  <figure> <img src={process.env.PUBLIC_URL + '/images/service-image02.jpg'} alt="service-image02"/> </figure>
 	    <h6>Palletforce<br/>
 Equipments</h6>
       <p>Sending smaller consignments of less than 10 pallets used to be expensive business, but we have a solution for you get.</p>
@@ -127,7 +129,7 @@ Equipments</h6>
 	
 	
 
-  <figure> <img src="http://qesco.themezinho.net/wp-content/uploads/2020/11/service-image03.jpg" alt="service-image03"/> </figure>
+  <figure> <img src={process.env.PUBLIC_URL + '/images/service-image03.jpg'} alt="service-image03"/> </figure>
 	    <h6>European Transport<br/>
 Logistics</h6>
       <p>In addition to our UK services, through our trusted and fully-vetted network of partners, we offer a full import and export service</p>

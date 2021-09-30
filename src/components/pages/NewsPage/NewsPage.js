@@ -10,7 +10,7 @@ const NewsPage = () => {
             <Navbar />
             {/* Section 1 */}
             <header className="page-header" data-stellar-background-ratio="0.7" 
-                style={{ backgroundImage: 'url(http://qesco.themezinho.net/wp-content/uploads/2020/10/page-header-bg.jpg)', backgroundPosition: '0px -33px' }}
+                style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/images/page-header-bg.jpg'})`, backgroundPosition: '0px -33px' }}
             >
                 <div className="container">
                     <h2>News</h2>
@@ -26,7 +26,7 @@ const NewsPage = () => {
                                 <div id="post-141" className="blog-post post-141 post type-post status-publish format-standard has-post-thumbnail hentry category-forwarding">
                                     <figure className="post-image">
                                         <img 
-                                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/news04.jpg" 
+                                            src={process.env.PUBLIC_URL + '/images/news04.jpg'}
                                             alt="Expression alteration entreaties mrs can terminated estimating."
                                         />
                                     </figure>
@@ -40,7 +40,7 @@ const NewsPage = () => {
                                             </h3>
                                             <div className="author post-author">
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/avatar-150x150.jpg" 
+                                                    src={process.env.PUBLIC_URL + '/images/avatar-150x150.jpg'}
                                                     alt="Quesco LLC"
                                                 />
                                                 <span>by<b>Quesco LLC</b></span>
@@ -51,7 +51,7 @@ const NewsPage = () => {
                                 <div id="post-139" className="blog-post post-139 post type-post status-publish format-standard has-post-thumbnail hentry category-outsourcing">
                                     <figure className="post-image">
                                         <img 
-                                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/news03.jpg" 
+                                            src={process.env.PUBLIC_URL + '/images/news03.jpg'}
                                             alt="Subject but why ten earnest husband imagine sixteen brandon."
                                         />
                                     </figure>
@@ -65,7 +65,7 @@ const NewsPage = () => {
                                             </h3>
                                             <div className="author post-author">
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/avatar-150x150.jpg" 
+                                                    src={process.env.PUBLIC_URL + '/images/avatar-150x150.jpg'}
                                                     alt="Quesco LLC" 
                                                 /><span>by<b>Quesco LLC</b></span>
                                             </div>
@@ -75,7 +75,7 @@ const NewsPage = () => {
                                 <div id="post-137" className="blog-post post-137 post type-post status-publish format-standard has-post-thumbnail hentry category-supply-chain">
                                     <figure className="post-image">
                                         <img 
-                                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/news02.jpg" 
+                                            src={process.env.PUBLIC_URL + '/images/news02.jpg'}
                                             alt="Sentiments way understood end partiality and his."
                                         />
                                     </figure>
@@ -89,7 +89,7 @@ const NewsPage = () => {
                                             </h3>
                                             <div className="author post-author">
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/avatar-150x150.jpg" 
+                                                    src={process.env.PUBLIC_URL + '/images/avatar-150x150.jpg'}
                                                     alt="Quesco LLC"
                                                 /> <span>by<b>Quesco LLC</b></span>
                                             </div>
@@ -99,7 +99,7 @@ const NewsPage = () => {
                                 <div id="post-1" className="blog-post post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-technology">
                                     <figure className="post-image">
                                         <img 
-                                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/news01.jpg" 
+                                            src={process.env.PUBLIC_URL + '/images/news01.jpg'}
                                             alt="An an valley indeed so no wonder future nature vanity."
                                         />
                                     </figure>
@@ -113,7 +113,7 @@ const NewsPage = () => {
                                             </h3>
                                             <div className="author post-author">
                                                 <img 
-                                                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/avatar-150x150.jpg" 
+                                                    src={process.env.PUBLIC_URL + '/images/avatar-150x150.jpg'}
                                                     alt="Quesco LLC"
                                                 /> <span>by<b>Quesco LLC</b></span>
                                             </div>
@@ -183,7 +183,7 @@ const NewsPage = () => {
                                                         <img 
                                                             width="150" 
                                                             height="150" 
-                                                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image02-150x150.jpg" 
+                                                            src={process.env.PUBLIC_URL + '/images/tab-image02-150x150.jpg'}
                                                             className="attachment-thumbnail size-thumbnail" 
                                                             alt="alt" loading="lazy"
                                                         />
@@ -199,7 +199,7 @@ const NewsPage = () => {
                                                         <img 
                                                             width="150" 
                                                             height="150" 
-                                                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/tab-image03-150x150.jpg" 
+                                                            src={process.env.PUBLIC_URL + '/images/tab-image03-150x150.jpg'}
                                                             className="attachment-thumbnail size-thumbnail" 
                                                             alt="" loading="lazy"
                                                         />
