@@ -4,7 +4,14 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+// Main Pages
 import HomePage from './components/pages/HomePage/HomePage'
+import LogisticsPage from './components/pages/LogisticsPage/LogisticsPage'
+import ServicesPage from './components/pages/ServicesPage/ServicesPage'
+import NewsPage from './components/pages/NewsPage/NewsPage'
+import AboutPage from './components/pages/AboutPage/AboutPage'
+import ContactPage from './components/pages/ContactPage/ContactPage'
+
 // Shipper Auth
 import SignInShipper from './components/pages/Signin/SignInShipper/SignInShipper'
 import SignUpShipper from './components/pages/Signup/SignUpShipper/SignUpShipper'
@@ -22,9 +29,26 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        {/* Main Pages */}
         <Route exact path="/" >
           <HomePage />
         </Route>
+        <Route exact path="/logistics" >
+          <LogisticsPage />
+        </Route>
+        <Route exact path="/services" >
+          <ServicesPage />
+        </Route>
+        <Route exact path="/news" >
+          <NewsPage />
+        </Route>
+        <Route exact path="/about" >
+          <AboutPage />
+        </Route>
+        <Route exact path="/contact" >
+          <ContactPage />
+        </Route>
+
         {/* Shipper Auth */}
         <Route exact path="/signinshipper" >
           <SignInShipper />

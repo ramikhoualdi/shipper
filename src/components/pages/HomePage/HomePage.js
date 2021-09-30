@@ -11,16 +11,9 @@ import {
 import { 
   BiCommentDetail,
 } from 'react-icons/bi';
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
-// Swiper.use([Navigation, Pagination]);
 
 const HomePage = () => {
   
-
   return (
     <div>
       <Topbar />
