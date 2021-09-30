@@ -48,7 +48,7 @@ const HomePage = () => {
                 <div className="wpb_wrapper">
                   <figure className="video-thumb">
                     <img
-                      src="http://qesco.themezinho.net/wp-content/uploads/2020/10/video-thumb.jpg"
+                      src={process.env.PUBLIC_URL + "/images/video-thumb.jpg"}
                       alt="logo"
                     />
                     <Link to="" data-fancybox>
@@ -112,7 +112,7 @@ const HomePage = () => {
                 <div className="wpb_wrapper" >
                 <figure className="side-image"> 
 	                <img 
-                    src="http://qesco.themezinho.net/wp-content/uploads/2020/10/side-image01.jpg" 
+                    src={process.env.PUBLIC_URL + "/images/side-image01.jpg"}
                     alt="alt"
                   />
                 </figure>
@@ -133,7 +133,7 @@ const HomePage = () => {
                     <div className="inner">
                       <figure> 
                         <img 
-                          src="http://qesco.themezinho.net/wp-content/uploads/2020/10/icon01.png" 
+                          src={process.env.PUBLIC_URL + "/images/icon01.png"}
                           alt="icon01"
                         /> 
                       </figure>
@@ -152,7 +152,7 @@ const HomePage = () => {
                     <div className="inner">
                       <figure>
                         <img 
-                          src="http://qesco.themezinho.net/wp-content/uploads/2020/10/icon02.png" 
+                          src={process.env.PUBLIC_URL + "/images/icon02.png"}
                           alt="icon02" 
                         />
                       </figure>
@@ -171,7 +171,7 @@ const HomePage = () => {
                     <div className="inner">
                       <figure>
                         <img 
-                          src="http://qesco.themezinho.net/wp-content/uploads/2020/10/icon03.png" 
+                          src={process.env.PUBLIC_URL + "/images/icon03.png"}
                           alt="icon03"
                         />
                       </figure>
@@ -200,7 +200,7 @@ const HomePage = () => {
                           <div className="section-title" style={{color:'#212223'}}>
                             <figure>
                               <img 
-                                src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                                src={process.env.PUBLIC_URL + "/images/section-title-shape.png"}
                                 alt="alt" 
                               />
                             </figure>
@@ -218,7 +218,7 @@ const HomePage = () => {
                           <div className="solution-box ">
                             <figure>
                               <img 
-                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/solution-image01.jpg" 
+                                src={process.env.PUBLIC_URL + "/images/solution-image01.jpg"}
                                 alt="Food &amp; Beverage" 
                               />
                               <figcaption>
@@ -237,7 +237,7 @@ const HomePage = () => {
                           <div className="solution-box ">
                             <figure>
                               <img 
-                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/solution-image02.jpg" 
+                                src={process.env.PUBLIC_URL + "/images/solution-image02.jpg"}
                                 alt="Global 4PL"
                               />
                               <figcaption>
@@ -256,7 +256,7 @@ const HomePage = () => {
                           <div className="solution-box ">
                             <figure>
                               <img 
-                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/solution-image03.jpg" 
+                                src={process.env.PUBLIC_URL + "/images/solution-image03.jpg"}
                                 alt="Consumer Packaged Goods" 
                               />
                               <figcaption>
@@ -275,7 +275,7 @@ const HomePage = () => {
                           <div className="solution-box ">
                             <figure>
                               <img 
-                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/solution-image04.jpg" 
+                                src={process.env.PUBLIC_URL + "/images/solution-image04.jpg"}
                                 alt="Transportation" 
                               />
                               <figcaption>
@@ -294,7 +294,7 @@ const HomePage = () => {
                           <div className="solution-box ">
                             <figure>
                               <img 
-                                src="http://qesco.themezinho.net/wp-content/uploads/2020/10/solution-image05.jpg" 
+                                src={process.env.PUBLIC_URL + "/images/solution-image05.jpg"}
                                 alt="Retails" 
                               />
                               <figcaption>
@@ -364,7 +364,7 @@ const HomePage = () => {
                     <div className="info-box">
                       <figure>
                         <img 
-                          src="http://qesco.themezinho.net/wp-content/uploads/2020/11/icon-infobox.png" 
+                          src={process.env.PUBLIC_URL + "/images/icon-infobox.png"} 
                           alt="alt" 
                         />
                       </figure>
@@ -375,7 +375,7 @@ const HomePage = () => {
                         drive down costs.</p>
                     </div>
                     <img 
-                      src="http://qesco.themezinho.net/wp-content/uploads/2020/10/side-image02.jpg" 
+                      src={process.env.PUBLIC_URL + "/images/side-image02.jpg"}
                       alt="alt"
                     />
                   </figure>
@@ -519,7 +519,7 @@ const HomePage = () => {
       {/* Section 8 */}
       <section 
         className="content-section bg-image" 
-        style={{ background: 'url(http://qesco.themezinho.net/wp-content/uploads/2020/11/section-bg-01.jpg) center no-repeat' }}
+        style={{ background: `url(${process.env.PUBLIC_URL + '/images/section-bg-01.jpg'}) center no-repeat` }}
       >
         <div className="vc_row row wpb_row vc_row-fluid vc_custom_1604247082648">
           <div className="wpb_column vc_column_container vc_col-sm-12 col-sm-12">
@@ -679,7 +679,7 @@ const HomePage = () => {
                         <div className="wpb_wrapper">
                           <figure className="logo-item ">
                             <img 
-                              src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo01.jpg" 
+                              src={process.env.PUBLIC_URL + '/images/logo01.jpg'}
                               alt="alt"
                             />
                           </figure>
@@ -691,7 +691,7 @@ const HomePage = () => {
                       <div className="wpb_wrapper">
                         <figure className="logo-item">
                           <img 
-                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo02.jpg" 
+                            src={process.env.PUBLIC_URL + '/images/logo02.jpg'}
                             alt="alt"
                           />
                           </figure>
@@ -703,7 +703,7 @@ const HomePage = () => {
                         <div className="wpb_wrapper">
                           <figure className="logo-item">
                             <img 
-                              src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo03.jpg" 
+                              src={process.env.PUBLIC_URL + '/images/logo03.jpg'}
                               alt="alt"
                             />
                           </figure>
@@ -715,7 +715,7 @@ const HomePage = () => {
                         <div className="wpb_wrapper">
                           <figure className="logo-item">
                             <img 
-                              src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo04.jpg" 
+                              src={process.env.PUBLIC_URL + '/images/logo04.jpg'} 
                               alt="alt"
                             />
                           </figure>
@@ -739,7 +739,7 @@ const HomePage = () => {
                   <div className="section-title" style={{ color: '#212223' }} >
                     <figure>
                       <img 
-                        src="http://qesco.themezinho.net/wp-content/themes/qesco/images/section-title-shape.png" 
+                        src={process.env.PUBLIC_URL + '/images/section-title-shape.png'}
                         alt="alt"
                       />
                     </figure>
@@ -752,7 +752,7 @@ const HomePage = () => {
                         <figure>
                           <img 
                             style={{ width: '570px',height: '380px', }}
-                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/news04.jpg" 
+                            src={process.env.PUBLIC_URL + '/images/news04.jpg'}
                             className="attachment-full size-full wp-post-image" 
                             alt="alt" 
                             loading="lazy" 
@@ -781,7 +781,7 @@ const HomePage = () => {
                         <figure>
                           <img 
                             style={{ width: '570px',height: '380px', }}
-                            src="http://qesco.themezinho.net/wp-content/uploads/2020/10/news03.jpg" 
+                            src={process.env.PUBLIC_URL + '/images/news03.jpg'}
                             className="attachment-full size-full wp-post-image" 
                             alt="alt" 
                             loading="lazy" 

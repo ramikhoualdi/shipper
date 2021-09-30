@@ -8,7 +8,7 @@ const CarouselSection = () => {
                 <Carousel.Item interval={5000}>
                     <img
                         // className="d-block w-100 "
-                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/slide01.jpg"
+                        src={process.env.PUBLIC_URL + "/images/slide01.jpg"}
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -19,7 +19,7 @@ const CarouselSection = () => {
                 <Carousel.Item interval={5000}>
                     <img
                         // className="d-block w-100"
-                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/slide02.jpg"
+                        src={process.env.PUBLIC_URL + "/images/slide02.jpg"}
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -30,7 +30,7 @@ const CarouselSection = () => {
                 <Carousel.Item interval={5000}>
                     <img
                         // className="d-block w-100"
-                        src="http://qesco.themezinho.net/wp-content/uploads/2020/10/slide03.jpg"
+                        src={process.env.PUBLIC_URL + "/images/slide03.jpg"}
                         alt="Third slide"
                     />
                     <Carousel.Caption>

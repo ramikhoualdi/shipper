@@ -11,7 +11,7 @@ const Footer = () => {
                             <div className="textwidget custom-html-widget" >
                                 <figure className="logo" >
                                     <img 
-                                        src="http://qesco.themezinho.net/wp-content/themes/qesco/images/logo.png"
+                                        src={process.env.PUBLIC_URL + "/images/logo.png"}
                                         alt=""
                                     />
                                 </figure>
