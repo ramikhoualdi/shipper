@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "../style.css";
-import { FiArrowRight } from "react-icons/fi";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
-import AuthFooter from "../../../sections/AuthFooter/AuthFooter";
+// import { FiArrowRight } from "react-icons/fi";
+// import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+// import AuthFooter from "../../../sections/AuthFooter/AuthFooter";
 import {
   signUpUser,
   resetAuthSuccess,
@@ -23,8 +23,12 @@ const SignUpShipper = () => {
   const dispatch = useDispatch();
   let history = useHistory();
 
-  const [name, handleName] = useState("Alex");
+  const [fname, handleFname] = useState("Alex");
+  const [lname, handleLname] = useState("Harry");
+  const [company, handleCompany] = useState("xyz");
+  const [job, handleJob] = useState("carrier");
   const [email, handleEmail] = useState("Alex@gmail.com");
+  const [phone, handlePhone] = useState("+1 1002003333");
   const [password, handlePassword] = useState("hellodude");
   const [visible, setVisible] = useState(false);
 
@@ -33,29 +37,29 @@ const SignUpShipper = () => {
       history.push("/shipper");
       dispatch(resetAuthSuccess());
     }
-  }, [signUpSuccess]);
+  });
 
-  const handleSubmit = () => {
-    let check = true;
-    if (!validator.isEmail(email)) {
-      check = false;
-    }
-    if (password.length < 8) {
-      check = false;
-    }
-    if (check) {
-      let type = "1";
-      console.log({ name, email, password, type });
-      let myObj = { name, email, password, type };
-      // dispatch(signUpUser(myObj));
-      history.push("/shipper");
-    } else {
-      console.log("Can't Sign Up !! ");
-    }
-  };
-  const visibleClicked = () => {
-    setVisible(!visible);
-  };
+  // const handleSubmit = () => {
+  //   let check = true;
+  //   if (!validator.isEmail(email)) {
+  //     check = false;
+  //   }
+  //   if (password.length < 8) {
+  //     check = false;
+  //   }
+  //   if (check) {
+  //     let type = "1";
+  //     console.log({ name, email, password, type });
+  //     let myObj = { name, email, password, type };
+  //     // dispatch(signUpUser(myObj));
+  //     history.push("/shipper");
+  //   } else {
+  //     console.log("Can't Sign Up !! ");
+  //   }
+  // };
+  // const visibleClicked = () => {
+  //   setVisible(!visible);
+  // };
   return (
     <div
       className="sininshipper"
@@ -151,6 +155,7 @@ const SignUpShipper = () => {
         <img
           src={process.env.PUBLIC_URL + "/images/main/log1.jpeg"}
           style={{ height: "100vh" }}
+          alt="logo1"
         />
       </div>
       <div
@@ -179,6 +184,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={fname}
+          onChange={handleFname}
         />
         {/* Last Name */}
         <label className="label">Last Name</label>
@@ -187,6 +194,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={lname}
+          onChange={handleLname}
         />
         {/* Company Name */}
         <label className="label">Company Name</label>
@@ -195,6 +204,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={company}
+          onChange={handleCompany}
         />
         {/* Job Title */}
         <label className="label">Job Title</label>
@@ -203,6 +214,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={job}
+          onChange={handleJob}
         />
         {/* Work Email */}
         <label className="label">Work Email</label>
@@ -211,6 +224,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={email}
+          onChange={handleEmail}
         />
         {/* Phone Number */}
         <label className="label">Phone Number</label>
@@ -219,6 +234,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={phone}
+          onChange={handlePhone}
         />
         {/* Password */}
         <label className="label">Password</label>
@@ -227,6 +244,8 @@ const SignUpShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="password"
+          value={password}
+          onChange={handlePassword}
         />
         <br />
         <Link to="/shipper">

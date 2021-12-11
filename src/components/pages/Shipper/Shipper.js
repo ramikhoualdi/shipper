@@ -1,14 +1,14 @@
-import SideNav, {
-  Toggle,
-  Nav,
-  NavItem,
-  NavIcon,
-  NavText,
-} from "@trendmicro/react-sidenav";
+// import SideNav, {
+//   Toggle,
+//   Nav,
+//   NavItem,
+//   NavIcon,
+//   NavText,
+// } from "@trendmicro/react-sidenav";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./styles.css";
 import GoogleMapReact from "google-map-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePlacesWidget } from "react-google-autocomplete";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -31,6 +31,7 @@ const Shipper = ({ user }) => {
   };
   const toggleSidebar = () => {
     console.log("Toggle Sidebar !");
+    setValid(!valid)
   };
   const zoom = 11;
   return (
@@ -41,6 +42,7 @@ const Shipper = ({ user }) => {
             <img
               src={process.env.PUBLIC_URL + "/icons/arrow_left.png"}
               style={{ width: "20px", height: "20px", marginLeft: "10px" }}
+              alt="back"
             />
           )}
         </div>
@@ -51,6 +53,7 @@ const Shipper = ({ user }) => {
           <img
             src={process.env.PUBLIC_URL + "/icons/more.png"}
             style={{ width: "20px", height: "20px", marginRight: "10px" }}
+            alt="more"
           />
         </div>
       </div>
@@ -95,6 +98,7 @@ const Shipper = ({ user }) => {
               <img
                 src={process.env.PUBLIC_URL + "/icons/close.png"}
                 style={{ height: "25px", width: "25px" }}
+                alt="close"
               />
             </div>
             <div
@@ -159,6 +163,7 @@ const Shipper = ({ user }) => {
                 <img
                   src={process.env.PUBLIC_URL + "/icons/icon1.png"}
                   style={{ padding: "10px" }}
+                  alt="pic"
                 />
               </div>
               <div style={{ width: "100%" }}>

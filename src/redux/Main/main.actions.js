@@ -1,5 +1,6 @@
 import mainTypes from "./main.types";
-import { auth, db, storage } from "../../firebase/utils";
+// import { auth, db, storage } from "../../firebase/utils";
+import { auth, db } from "../../firebase/utils";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, addDoc } from "firebase/firestore";
 

@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../style.css";
-import { FiArrowRight } from "react-icons/fi";
-import { AiOutlineGoogle } from "react-icons/ai";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
-import AuthFooter from "../../../sections/AuthFooter/AuthFooter";
-import { signIn } from "../../../../redux/Main/main.actions";
-import { useDispatch, useSelector } from "react-redux";
-import validator from "validator";
+// import { FiArrowRight } from "react-icons/fi";
+// import { AiOutlineGoogle } from "react-icons/ai";
+// import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+// import AuthFooter from "../../../sections/AuthFooter/AuthFooter";
+// import { signIn } from "../../../../redux/Main/main.actions";
+import {useSelector } from "react-redux";
+// import validator from "validator";
 
 const mapState = ({ main }) => ({
   currentUser: main.currentUser,
@@ -17,34 +17,34 @@ const mapState = ({ main }) => ({
 
 const SignInShipper = () => {
   const { currentUser, signInSuccess, errors } = useSelector(mapState);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [email, handleEmail] = useState("");
   const [password, handlePassword] = useState("");
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     console.log("useEffect SignInShipper");
     console.log(currentUser, signInSuccess, errors);
   }, [currentUser, signInSuccess, errors]);
 
-  const handleSubmit = () => {
-    let check = true;
-    if (!validator.isEmail(email)) {
-      check = false;
-    }
-    if (password.length < 8) {
-      check = false;
-    }
-    if (check) {
-      dispatch(signIn(email, password));
-    } else {
-      console.log("Can t Login !! ");
-    }
-  };
-  const visibleClicked = () => {
-    setVisible(!visible);
-  };
+  // const handleSubmit = () => {
+  //   let check = true;
+  //   if (!validator.isEmail(email)) {
+  //     check = false;
+  //   }
+  //   if (password.length < 8) {
+  //     check = false;
+  //   }
+  //   if (check) {
+  //     dispatch(signIn(email, password));
+  //   } else {
+  //     console.log("Can t Login !! ");
+  //   }
+  // };
+  // const visibleClicked = () => {
+  //   setVisible(!visible);
+  // };
 
   return (
     <div
@@ -145,6 +145,8 @@ const SignInShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="text"
+          value={email}
+          onChange={handleEmail}
         />
         <label className="label">Password</label>
         <br />
@@ -152,16 +154,18 @@ const SignInShipper = () => {
           className="input"
           style={{ padding: "10px", height: "40px" }}
           type="password"
+          value={password}
+          onChange={handlePassword}
         />
         <br />
         <div style={{ display: "flex", flexDirection: "row" }}>
           <p style={{ fontSize: "12px" }}>Having trouble logging in ?</p>
-          <a
-            style={{ fontSize: "12px", color: "blue", cursor: "pointer" }}
+          <button
+            style={{ fontSize: "12px", color: "blue", cursor: "pointer", border: "none", }}
             className="link"
           >
             Reset your password
-          </a>
+          </button>
         </div>
         <Link to="/shipper">
           <button className="btn" style={{ maxWidth: "420px", height: "40px" }}>
@@ -191,6 +195,7 @@ const SignInShipper = () => {
         <img
           src={process.env.PUBLIC_URL + "/images/main/log1.jpeg"}
           style={{ height: "100vh" }}
+          alt="logo"
         />
       </div>
     </div>

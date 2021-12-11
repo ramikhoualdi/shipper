@@ -1,5 +1,5 @@
 import carrierTypes from "./carrier.types";
-import { auth, db, storage } from "../../firebase/utils";
+// import { auth, db, storage } from "../../firebase/utils";
 
 
 // AUTH

@@ -4,8 +4,8 @@ import "./styles.css";
 // import { useSelector } from 'react-redux'
 
 const Navbar = () => {
-  const [userS, setUserS] = useState(false);
-  const [userC, setUserC] = useState(false);
+  let userS = false
+  let userC = false
 
   return (
     <div className="navbar">

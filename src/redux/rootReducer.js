@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
+// import { configureStore } from "@reduxjs/toolkit";
 
 // import shipperReducer from "./Shipper/shipper.reducer";
 // import carrierReducer from "./Carrier/carrier.reducer";
