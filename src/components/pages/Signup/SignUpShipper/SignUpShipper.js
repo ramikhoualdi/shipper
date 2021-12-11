@@ -5,11 +5,11 @@ import "../style.css";
 // import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 // import AuthFooter from "../../../sections/AuthFooter/AuthFooter";
 import {
-  signUpUser,
+  // signUpUser,
   resetAuthSuccess,
 } from "../../../../redux/Main/main.actions";
 import { useDispatch, useSelector } from "react-redux";
-import validator from "validator";
+// import validator from "validator";
 
 const mapState = ({ main }) => ({
   currentUser: main.currentUser,
@@ -30,7 +30,7 @@ const SignUpShipper = () => {
   const [email, handleEmail] = useState("Alex@gmail.com");
   const [phone, handlePhone] = useState("+1 1002003333");
   const [password, handlePassword] = useState("hellodude");
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (signUpSuccess) {
