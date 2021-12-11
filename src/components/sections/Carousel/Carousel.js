@@ -1,5 +1,6 @@
 import './styles.css'
 import Carousel  from 'react-bootstrap/Carousel'
+import { Link } from 'react-router-dom'
 
 const CarouselSection = () => {
     return (
@@ -12,8 +13,11 @@ const CarouselSection = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <div class="container container_carousel">
+                            <h1>Transport <br/>Logistics</h1>
+                            <p>Take the complexity out of customs Freight Solutions<br/>with customs brokerage services</p>
+                            <Link to="/"> DISCOVER ALL</Link>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
@@ -23,8 +27,11 @@ const CarouselSection = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="container container_carousel">
+                            <h1>Quickest & Safe <br/>Delivery</h1>
+                            <p>Take the complexity out of customs Freight Solutions<br/>with customs brokerage services</p>
+                            <Link to="/"> DISCOVER ALL</Link>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
@@ -34,8 +41,11 @@ const CarouselSection = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <div class="container container_carousel">
+                            <h1>Allways <br/>Trustable</h1>
+                            <p>Take the complexity out of customs Freight Solutions<br/>with customs brokerage services</p>
+                            <Link to="/"> DISCOVER ALL</Link>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

@@ -1,0 +1,14 @@
+const mainTypes = {
+    // AUTH
+    SET_CURRENT: "SET_CURRENT",
+    SIGN_IN_SUCCESS: "SIGN_IN_SUCCESS",
+    SIGN_UP_SUCCESS: "SIGN_UP_SUCCESS",
+    RECOVERY_SUCCESS: "RECOVERY_SUCCESS",
+    SIGN_OUT_SUCCESS: "SIGN_OUT_SUCCESS",
+    // Fetch Shipper
+    FETCH_CURRENT_USER: "FETCH_CURRENT_USER",
+    // auth reset
+    RESET_AUTH_STATE: "RESET_AUTH_STATE",
+  };
+  export default mainTypes;
+  

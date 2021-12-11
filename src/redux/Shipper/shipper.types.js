@@ -1,0 +1,10 @@
+const shipperTypes = {
+  // AUTH
+  SET_CURRENT: "SET_CURRENT",
+  SIGN_IN_SUCCESS: "SIGN_IN_SUCCESS",
+  SIGN_UP_SUCCESS: "SIGN_UP_SUCCESS",
+  RECOVERY_SUCCESS: "RECOVERY_SUCCESS",
+  // Fetch Shipper
+  FETCH_SHIPPER: "FETCH_SHIPPER",
+};
+export default shipperTypes;

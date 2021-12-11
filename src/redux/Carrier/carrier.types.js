@@ -1,0 +1,12 @@
+const carrierTypes = {
+  // AUTH
+  SET_CURRENT: "SET_CURRENT",
+  SIGN_IN_SUCCESS: "SIGN_IN_SUCCESS",
+  SIGN_UP_SUCCESS: "SIGN_UP_SUCCESS",
+  RECOVERY_SUCCESS: "RECOVERY_SUCCESS",
+  // Reset Auth token
+  RESET_SIGN_IN_SUCCESS: "RESET_SIGN_IN_SUCCESS",
+  // Fetch Shipper
+  FETCH_SHIPPER: "FETCH_SHIPPER",
+};
+export default carrierTypes;

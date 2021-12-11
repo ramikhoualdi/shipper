@@ -485,7 +485,7 @@ const ServicesPage = () => {
                         <br />
                         requirements
                       </p>
-                      <Link to="/contact/">CLICK HERE TO CONTACT US!</Link>
+                      <Link to="/contact">CLICK HERE TO CONTACT US!</Link>
                     </div>
                   </div>
                 </div>

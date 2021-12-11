@@ -1,84 +1,78 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Main Pages
-import HomePage from './components/pages/HomePage/HomePage'
-import LogisticsPage from './components/pages/LogisticsPage/LogisticsPage'
-import ServicesPage from './components/pages/ServicesPage/ServicesPage'
-import NewsPage from './components/pages/NewsPage/NewsPage'
-import AboutPage from './components/pages/AboutPage/AboutPage'
-import ContactPage from './components/pages/ContactPage/ContactPage'
+import HomePage from "./components/pages/HomePage/HomePage";
+import LogisticsPage from "./components/pages/LogisticsPage/LogisticsPage";
+import ServicesPage from "./components/pages/ServicesPage/ServicesPage";
+import NewsPage from "./components/pages/NewsPage/NewsPage";
+import AboutPage from "./components/pages/AboutPage/AboutPage";
+import ContactPage from "./components/pages/ContactPage/ContactPage";
 
 // Shipper Auth
-import SignInShipper from './components/pages/Signin/SignInShipper/SignInShipper'
-import SignUpShipper from './components/pages/Signup/SignUpShipper/SignUpShipper'
+import SignInShipper from "./components/pages/Signin/SignInShipper/SignInShipper";
+import SignUpShipper from "./components/pages/Signup/SignUpShipper/SignUpShipper";
 // Carrier Auth
-import SignInCarrier from './components/pages/Signin/SignInCarrier/SignInCarrier'
-import SignUpCarrier from './components/pages/Signup/SignUpCarrier/SignUpCarrier'
+import SignInCarrier from "./components/pages/Signin/SignInCarrier/SignInCarrier";
+import SignUpCarrier from "./components/pages/Signup/SignUpCarrier/SignUpCarrier";
 // Recovery
-import Recovery from './components/pages/Recovery/Recovery'
+import Recovery from "./components/pages/Recovery/Recovery";
 // Carrier
-import Carrier from './components/pages/Carrier/Carrier' 
-// Shipper 
-import Shipper from './components/pages/Shipper/Shipper'
+import Carrier from "./components/pages/Carrier/Carrier";
+// Shipper
+import Shipper from "./components/pages/Shipper/Shipper";
 
 const App = () => {
   return (
     <Router>
       <Switch>
         {/* Main Pages */}
-        <Route exact path="/" >
+        <Route exact path="/">
           <HomePage />
         </Route>
-        <Route exact path="/logistics" >
+        <Route exact path="/logistics">
           <LogisticsPage />
         </Route>
-        <Route exact path="/services" >
+        <Route exact path="/services">
           <ServicesPage />
         </Route>
-        <Route exact path="/news" >
+        <Route exact path="/news">
           <NewsPage />
         </Route>
-        <Route exact path="/about" >
+        <Route exact path="/about">
           <AboutPage />
         </Route>
-        <Route exact path="/contact" >
+        <Route exact path="/contact">
           <ContactPage />
         </Route>
-
         {/* Shipper Auth */}
-        <Route exact path="/signinshipper" >
+        <Route exact path="/signinshipper">
           <SignInShipper />
         </Route>
-        <Route exact path="/signupshipper" >
+        <Route exact path="/signupshipper">
           <SignUpShipper />
         </Route>
         {/* Carrier Auth */}
-        <Route exact path="/signincarrier" >
+        <Route exact path="/signincarrier">
           <SignInCarrier />
         </Route>
-        <Route exact path="/signupcarrier" >
+        <Route exact path="/signupcarrier">
           <SignUpCarrier />
         </Route>
         {/* Recovery Password */}
-        <Route exact path="/recovery" >
+        <Route exact path="/recovery">
           <Recovery />
         </Route>
         {/* Shipper Home Page */}
-        <Route exact path="/shipper"  >
+        <Route exact path="/shipper">
           <Shipper />
         </Route>
         {/* Carrier Home Page */}
-        <Route exact path="/carrier"  >
+        <Route exact path="/carrier">
           <Carrier />
         </Route>
-
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

@@ -51,7 +51,7 @@ const HomePage = () => {
                       src={process.env.PUBLIC_URL + "/images/video-thumb.jpg"}
                       alt="logo"
                     />
-                    <Link to="" data-fancybox>
+                    <Link to="/" data-fancybox>
                       Play Button
                     </Link>
                   </figure>
@@ -102,7 +102,7 @@ const HomePage = () => {
                   <div className="side-content left" >
                     <h2>Worldwide Logistics, Air Freight Forwarding, Road Haulage.</h2>
                     <p>Qesco Logistics is a leading third party contract logistics company based in the Midlands, United Kingdom. We specialise in providing supply-chain warehousing and transport services throughout the UK, Ireland and Continental Europe.</p>
-	                  <Link to="/logistics/" className="custom-button">Discover All Solutions</Link>
+	                  <Link to="/logistics" className="custom-button">Discover All Solutions</Link>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ const HomePage = () => {
                       </figure>
                       <h6>Leadership</h6>
                       <p>Experts who have extensive, hands-on experience in supply chain management</p>
-                      <Link to="/services/" className="custom-link">Connect with an Expert</Link>
+                      <Link to="/services" className="custom-link">Connect with an Expert</Link>
                     </div>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ const HomePage = () => {
                       </figure>
                       <h6>Technology</h6>
                       <p>Innovative and varied use of technology on the road, ocean, railways, in the air.</p>
-                      <Link to="/services/" className="custom-link">Connect with an Expert</Link>
+                      <Link to="/services" className="custom-link">Connect with an Expert</Link>
                     </div>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ const HomePage = () => {
                       </figure>
                       <h6>Solution</h6>
                       <p>Global leaders in intermodal, less-than-truckload, supply chain management.</p>
-                      <Link to="/services/" className="custom-link">Connect with an Expert</Link>
+                      <Link to="/services" className="custom-link">Connect with an Expert</Link>
                     </div>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ const HomePage = () => {
                               <figcaption>
                                 <small>Solutions</small>
                                 <h6>Food &amp; Beverage</h6>
-                                <Link to="/services/" className="custom-link">Discover All</Link>
+                                <Link to="/services" className="custom-link">Discover All</Link>
                               </figcaption>
                             </figure> 
                           </div>
@@ -243,7 +243,7 @@ const HomePage = () => {
                               <figcaption>
                                 <small>Solutions</small>
                                 <h6>Global 4PL</h6>
-                                <Link to="/services/" className="custom-link">Discover All</Link>
+                                <Link to="/services" className="custom-link">Discover All</Link>
                               </figcaption>
                             </figure> 
                           </div>
@@ -262,7 +262,7 @@ const HomePage = () => {
                               <figcaption>
                                 <small>Solutions</small>
                                 <h6>Consumer Packaged Goods</h6>
-                                <Link to="/services/" className="custom-link">Discover All</Link>
+                                <Link to="/services" className="custom-link">Discover All</Link>
                               </figcaption>
                             </figure> 
                           </div>
@@ -281,7 +281,7 @@ const HomePage = () => {
                               <figcaption>
                                 <small>Solutions</small>
                                 <h6>Transportation</h6>
-                                <Link to="/services/" className="custom-link">Discover All</Link>
+                                <Link to="/services" className="custom-link">Discover All</Link>
                               </figcaption>
                             </figure> 
                           </div>
@@ -300,7 +300,7 @@ const HomePage = () => {
                               <figcaption>
                                 <small>Solutions</small>
                                 <h6>Retails</h6>
-                                <Link to="/services/" className="custom-link">Discover All</Link>
+                                <Link to="/services" className="custom-link">Discover All</Link>
                               </figcaption>
                             </figure> 
                           </div>
@@ -332,27 +332,27 @@ const HomePage = () => {
 	 	                <h2>Quality delivered as standard</h2>
                     <ul>
                       <li>
-                        <Link to="/logistics/">Forwarding  
+                        <Link to="/logistics">Forwarding  
                           <VscChevronRight style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                         </Link>
                       </li>
                       <li>
-                        <Link to="/logistics/">Supply Chain  
+                        <Link to="/logistics">Supply Chain  
                           <VscChevronRight style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                         </Link>
                       </li>
                       <li>
-                        <Link to="/logistics/">Outsourcing  
+                        <Link to="/logistics">Outsourcing  
                           <VscChevronRight style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                         </Link>
                       </li>
                       <li>
-                        <Link to="/logistics/">Technology  
+                        <Link to="/logistics">Technology  
                           <VscChevronRight style={{ color:'var(--color-dark)', fontSize: '14px' }} />
                         </Link>
                       </li>
                     </ul>
-	                  <Link to="/services/" className="custom-link">See All Services</Link>
+	                  <Link to="/services" className="custom-link">See All Services</Link>
                   </div>
                 </div>
               </div>
@@ -528,8 +528,8 @@ const HomePage = () => {
                 <div className="cta-box" style={{ color: '#ffffff' }}>
 	                <h2>We are now Logistics<br/>Industry Limited</h2>
   	              <p>We’re one of the UK’s leading shipping and logistics providers.</p>
-                  <Link to="/contact/" className="custom-button">Get a Qoute</Link>
-                  <Link to="/contact/" className="light-button">Estimate Cost</Link> 	
+                  <Link to="/contact" className="custom-button">Get a Qoute</Link>
+                  <Link to="/contact" className="light-button">Estimate Cost</Link> 	
                 </div>
               </div>
             </div>
@@ -757,13 +757,13 @@ const HomePage = () => {
                             alt="alt" 
                             loading="lazy" 
                           />
-                          <Link to="/blog/expression-alteration-entreaties-mrs-can-terminated-estimating/">
+                          <Link to="/blog/expression-alteration-entreaties-mrs-can-terminated-estimating">
                             <VscChevronRight style={{ color:'var(--color-dark)', fontSize: '18px' }} />
                           </Link> 
                         </figure>
                         <div className="content">
                           <h3>
-                            <Link to="/blog/expression-alteration-entreaties-mrs-can-terminated-estimating/">
+                            <Link to="/blog/expression-alteration-entreaties-mrs-can-terminated-estimating">
                               Expression alteration entreaties mrs can terminated estimating.
                             </Link>
                           </h3>
@@ -786,13 +786,13 @@ const HomePage = () => {
                             alt="alt" 
                             loading="lazy" 
                           />
-                          <Link to="/blog/subject-but-why-ten-earnest-husband-imagine-sixteen-brandon/">
+                          <Link to="/blog/subject-but-why-ten-earnest-husband-imagine-sixteen-brandon">
                             <VscChevronRight style={{ color:'var(--color-dark)', fontSize: '18px' }} />
                           </Link> 
                         </figure>
                         <div className="content">
                           <h3>
-                            <Link to="/blog/subject-but-why-ten-earnest-husband-imagine-sixteen-brandon/">
+                            <Link to="/blog/subject-but-why-ten-earnest-husband-imagine-sixteen-brandon">
                               Subject but why ten earnest husband imagine sixteen brandon.
                             </Link>
                           </h3>

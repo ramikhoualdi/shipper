@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
+// import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+  const [userS, setUserS] = useState(false);
+  const [userC, setUserC] = useState(false);
+
   return (
     <div className="navbar">
       <div className="container">
         <div className="inner">
           <div className="logo">
             <Link exact to="/">
-              {/* <img src="http://qesco.themezinho.net/wp-content/uploads/2020/10/logo.png" src={ process.env.PUBLIC_URL + '/images/logo.png'} alt="logo" /> */}
               <img
                 src={process.env.PUBLIC_URL + "/images/logo.png"}
                 alt="logo"
@@ -18,10 +22,18 @@ const Navbar = () => {
           <div className="custom-menu">
             <ul>
               <li>
-                <Link to="/shipper">Shipper</Link>
+                {userS ? (
+                  <Link to="/shipper">Shipper</Link>
+                ) : (
+                  <Link to="/signinshipper">Shipper</Link>
+                )}
               </li>
               <li>
-                <Link to="/carrier">Carrier</Link>
+                {userC ? (
+                  <Link to="/carrier">Carrier</Link>
+                ) : (
+                  <Link to="/signincarrier">Carrier</Link>
+                )}
               </li>
             </ul>
           </div>
@@ -52,7 +64,7 @@ const Navbar = () => {
             <span></span>
           </div>
           <div className="navbar-button">
-            <Link to="/">GET A QUOTE</Link>
+            <Link to="/">GET STARTED</Link>
           </div>
         </div>
       </div>

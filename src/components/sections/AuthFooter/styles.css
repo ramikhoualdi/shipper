@@ -1,0 +1,7 @@
+.auth_footer{
+    text-align: center;
+    color: var(--color-dark);
+    height: 50px;
+    background-color: #fff;
+    padding: 5px;
+}
