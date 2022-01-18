@@ -19,9 +19,10 @@ const mainReducer = (state = INITIAL_STATE, action) => {
         currentUser: action.payload,
       };
     case mainTypes.SIGN_IN_SUCCESS:
+      console.log("hello there")
       return {
         ...state,
-        signInSuccess: action.payload,
+        signInSuccess: true,
       };
     case mainTypes.SIGN_UP_SUCCESS:
       return {

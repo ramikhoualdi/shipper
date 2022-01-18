@@ -3,6 +3,8 @@ import mainTypes from "./main.types";
 import { auth, db } from "../../firebase/utils";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, addDoc, setDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { doc, addDoc } from "firebase/firestore";
 
 // AUTH
 export const setCurrentUser = (props) => ({
@@ -15,15 +17,29 @@ export const signOutUser = () => ({
   payload: null,
 });
 
-export const signIn = ({ email, password }) => {
-  try {
-    console.log("Email & Password from main action");
-    console.log(email, " <=> ", password);
-  } catch (err) {
-    console.log("catch from signin main");
-    console.log(err);
-  }
-};
+export const signInUser =
+  ({ email, password }) =>
+  async (dispatch) => {
+    try {
+      console.log("From Sign In action");
+      await signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          dispatch({
+            type: mainTypes.SIGN_IN_SUCCESS,
+            payload: true,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } catch (err) {
+      console.log("catch from signin main");
+      console.log(err);
+    }
+  };
+
+
+
 export const signUpUser =
   ({ fname, email, password, type }) =>
   async (dispatch) => {
