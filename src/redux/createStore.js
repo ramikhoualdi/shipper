@@ -1,16 +1,13 @@
-// import { createStore, applyMiddleware, compose } from "redux";
-// import logger from "redux-logger";
-// import rootReducer from "./rootReducer";
-// import thunkMiddleware from "redux-thunk";
-// import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
+import logger from "redux-logger";
+import rootReducer from "./rootReducer";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "@redux-devtools/extension";
 
-// export const middlewares = [logger, thunkMiddleware];
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// export const store = createStore(
-//   rootReducer,
-//   undefined,
-//   composeEnhancers(applyMiddleware(...middlewares))
-// );
+const middlewares = [logger, thunk];
+const composedEnhancer = composeWithDevTools(applyMiddleware(...middlewares));
+const store = createStore(rootReducer, composedEnhancer);
+export default store;
 // const loggerMiddleware = (store) => (next) => (action) => {
 //   console.group(action.type);
 //   console.info("dispatching", action);
@@ -43,12 +40,11 @@
 // const store = createStore(rootReducer, applyMiddleware(thunk))
 // const store = createStore(rootReducer, undefined, composedEnhancers);
 
-
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from "./rootReducer";
-const store =  configureStore({
-  reducer: {
-    main: rootReducer,
-  },
-})
-export default store;
+// import { configureStore } from '@reduxjs/toolkit'
+// import rootReducer from "./rootReducer";
+// const store =  configureStore({
+//   reducer: {
+//     main: rootReducer,
+//   },
+// })
+// export default store;
