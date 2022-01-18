@@ -36,7 +36,7 @@ const SignUpShipper = () => {
     }
   });
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let check = true;
     if (!validator.isEmail(email)) {
       check = false;
@@ -47,8 +47,8 @@ const SignUpShipper = () => {
     if (check) {
       let type = "1";
       console.log({ fname, email, password, type });
-      let myObj = { fname, email, password, type };
-      dispatch(signUpUser(myObj));
+      // let myObj = { fname, email, password, type };
+      dispatch(signUpUser({ fname, email, password, type }));
       history.push("/shipper");
     } else {
       setVisible(true);

@@ -6,8 +6,13 @@ import { doc, addDoc } from "firebase/firestore";
 
 // AUTH
 export const setCurrentUser = () => ({
-  type: mainTypes.SIGN_IN_SUCCESS,
+  type: mainTypes.CURRENT_USER,
   payload: true,
+});
+
+export const signOutUser = () => ({
+  type: mainTypes.CURRENT_USER,
+  payload: false,
 });
 
 export const signIn = ({ email, password }) => {
@@ -19,13 +24,15 @@ export const signIn = ({ email, password }) => {
     console.log(err);
   }
 };
-export const signUpUser = (props) => async (dispatch) => {
-  console.log("Props from signUpUser ", props);
-  dispatch({
-    type: mainTypes.SIGN_UP_SUCCESS,
-    payload: true,
-  });
-};
+export const signUpUser =
+  ({ fname, email, password, type }) =>
+  async (dispatch) => {
+    console.log("Props from signUpUser ", { fname, email, password, type });
+    // dispatch({
+    //   type: mainTypes.SIGN_UP_SUCCESS,
+    //   payload: true,
+    // });
+  };
 export const resetAuthSuccess = () => ({
   type: mainTypes.RESET_AUTH_STATE,
 });
