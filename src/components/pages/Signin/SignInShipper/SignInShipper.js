@@ -29,16 +29,15 @@ const SignInShipper = () => {
   useEffect(() => {
     console.log("useEffect SignInShipper");
     console.log(currentUser, signInSuccess, errors);
+    if (signInSuccess){
+      history.push("/shipper");
+    }
   }, [currentUser, signInSuccess, errors]);
 
   const handleSubmit = async () => {
     let check = true;
-
-
     if (check) {
-
       dispatch(signInUser({ email, password}));
-      history.push("/shipper");
     } else {
       console.log("Can't Sign In !! ");
     }
@@ -86,10 +85,10 @@ const SignInShipper = () => {
           onChange={(e) => handlePassword(e.target.value)}
         />
         <br />
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <p style={{ fontSize: "12px" }}>Having trouble logging in ?</p>
+        <div style={{ display: "flex", flexDirection: "row", marginBottom:20 }}>
+          <p style={{ fontSize: "12px",marginBottom:0 }}>Having trouble logging in ?</p>
           <button
-            style={{ fontSize: "12px", color: "blue", cursor: "pointer", border: "none", }}
+            style={{ fontSize: "12px", color: "blue", cursor: "pointer", border: "none", background:"transparent"}}
             className="link"
           >
             Reset your password

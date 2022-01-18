@@ -8,9 +8,11 @@
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./styles.css";
 import GoogleMapReact from "google-map-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePlacesWidget } from "react-google-autocomplete";
-
+import { signOutUser } from "../../../redux/Main/main.actions";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Shipper = ({ user }) => {
@@ -31,7 +33,14 @@ const Shipper = ({ user }) => {
   };
   const toggleSidebar = () => {
     console.log("Toggle Sidebar !");
-    setValid(!valid)
+    setValid(!valid);
+  };
+
+  const dispatch = useDispatch();
+  let history = useHistory();
+  const logOut = () => {
+    dispatch(signOutUser());
+    history.push("/signinshipper");
   };
   const zoom = 11;
   return (
@@ -105,9 +114,10 @@ const Shipper = ({ user }) => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
                 alignItems: "center",
+                justifyContent: "flex-start",
                 backgroundColor: "white",
+                height: "100%",
               }}
             >
               <img
@@ -117,6 +127,9 @@ const Shipper = ({ user }) => {
               />
               <p className="profileName">Harry Arthur</p>
               <p className="profileName">harryArthur@shipways.com</p>
+              <button onClick={logOut} className="btn">
+                Logged Out
+              </button>
             </div>
           </div>
         </div>
