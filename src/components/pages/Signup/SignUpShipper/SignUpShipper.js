@@ -185,7 +185,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="text"
           value={fname}
-          onChange={handleFname}
+          onChange={(e) => handleFname(e.target.value)}
         />
         {/* Last Name */}
         <label className="label">Last Name</label>
@@ -195,7 +195,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="text"
           value={lname}
-          onChange={handleLname}
+          onChange={(e) => handleLname(e.target.value)}
         />
         {/* Company Name */}
         <label className="label">Company Name</label>
@@ -205,7 +205,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="text"
           value={company}
-          onChange={handleCompany}
+          onChange={(e)=> handleCompany(e.target.value)}
         />
         {/* Job Title */}
         <label className="label">Job Title</label>
@@ -215,7 +215,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="text"
           value={job}
-          onChange={handleJob}
+          onChange={(e) => handleJob(e.target.value)}
         />
         {/* Work Email */}
         <label className="label">Work Email</label>
@@ -225,7 +225,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="text"
           value={email}
-          onChange={handleEmail}
+          onChange={(e) => handleEmail(e.target.value)}
         />
         {/* Phone Number */}
         <label className="label">Phone Number</label>
@@ -235,7 +235,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="text"
           value={phone}
-          onChange={handlePhone}
+          onChange={(e) => handlePhone(e.target.value)}
         />
         {/* Password */}
         <label className="label">Password</label>
@@ -245,7 +245,7 @@ const SignUpShipper = () => {
           style={{ padding: "10px", height: "40px" }}
           type="password"
           value={password}
-          onChange={handlePassword}
+          onChange={(e) => handlePassword(e.target.value)}
         />
         <br />
         <Link to="/shipper">
