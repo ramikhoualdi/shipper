@@ -27,6 +27,7 @@ const SignUpShipper = () => {
   const [email, handleEmail] = useState("Alex@gmail.com");
   const [password, handlePassword] = useState("hellodude");
   const [cpassword, handleCpassword] = useState("hellodude");
+  const [msgError, setMsgError] = useState("");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -34,7 +35,19 @@ const SignUpShipper = () => {
       history.push("/shipper");
       dispatch(resetAuthSuccess());
     }
-  });
+    if (errors?.length > 0) {
+      console.log("Error useEffect", errors.message);
+      if (errors === "Firebase: Error (auth/email-already-in-use).") {
+        setMsgError(
+          `The provided email is already in use by an existing user.
+           Each user must have a unique email.`
+        );
+      } else {
+        setMsgError("Please check you credentials again.");
+      }
+      setVisible(true);
+    }
+  }, [signUpSuccess, errors]);
 
   const handleSubmit = async () => {
     let check = true;
@@ -47,9 +60,7 @@ const SignUpShipper = () => {
     if (check) {
       let type = "1";
       console.log({ fname, email, password, type });
-      // let myObj = { fname, email, password, type };
       dispatch(signUpUser({ fname, email, password, type }));
-      history.push("/shipper");
     } else {
       setVisible(true);
       console.log("Can't Sign Up !! ");
@@ -136,9 +147,7 @@ const SignUpShipper = () => {
         />
         <br />
         {/* <Link to="/shipper"> */}
-        {visible && (
-          <p style={{ color: "red" }}>Error SignUp Please check your details</p>
-        )}
+        {visible && <p className="error">{msgError}</p>}
         <button
           className="btn"
           style={{ maxWidth: "420px", height: "40px" }}

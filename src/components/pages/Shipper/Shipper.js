@@ -10,10 +10,19 @@ import "./styles.css";
 import GoogleMapReact from "google-map-react";
 import { useState } from "react";
 import { usePlacesWidget } from "react-google-autocomplete";
+import { useDispatch, useSelector } from "react-redux";
+
+const mapState = ({ main }) => ({
+  currentUser: main.currentUser,
+  errors: main.errors,
+});
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Shipper = ({ user }) => {
+  const { currentUser, errors } = useSelector(mapState);
+  console.log("Hoeme Page");
+  console.log(currentUser, errors);
   const [valid, setValid] = useState(false);
   const { ref } = usePlacesWidget({
     apiKey: "AIzaSyCYm0h7nJW8k0O-IPU4T3cKROKXWoBuy9A",
@@ -31,7 +40,7 @@ const Shipper = ({ user }) => {
   };
   const toggleSidebar = () => {
     console.log("Toggle Sidebar !");
-    setValid(!valid)
+    setValid(!valid);
   };
   const zoom = 11;
   return (

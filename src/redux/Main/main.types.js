@@ -9,6 +9,7 @@ const mainTypes = {
     FETCH_CURRENT_USER: "FETCH_CURRENT_USER",
     // auth reset
     RESET_AUTH_STATE: "RESET_AUTH_STATE",
+    AUTH_ERROR: "AUTH_ERROR",
   };
   export default mainTypes;
   

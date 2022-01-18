@@ -2,17 +2,17 @@ import mainTypes from "./main.types";
 // import { auth, db, storage } from "../../firebase/utils";
 import { auth, db } from "../../firebase/utils";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, addDoc } from "firebase/firestore";
+import { doc, addDoc, setDoc } from "firebase/firestore";
 
 // AUTH
-export const setCurrentUser = () => ({
+export const setCurrentUser = (props) => ({
   type: mainTypes.CURRENT_USER,
-  payload: true,
+  payload: props,
 });
 
 export const signOutUser = () => ({
   type: mainTypes.CURRENT_USER,
-  payload: false,
+  payload: null,
 });
 
 export const signIn = ({ email, password }) => {
@@ -28,10 +28,37 @@ export const signUpUser =
   ({ fname, email, password, type }) =>
   async (dispatch) => {
     console.log("Props from signUpUser ", { fname, email, password, type });
-    // dispatch({
-    //   type: mainTypes.SIGN_UP_SUCCESS,
-    //   payload: true,
-    // });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log("userCredential ", userCredential);
+        let kind = "";
+        if (type === "1") kind = "shipper";
+        if (type === "2") kind = "carrier";
+        setDoc(doc(db, kind, email), {
+          username: fname,
+          email: email,
+          password: password,
+          kind: kind,
+          phone: "",
+          country: "",
+          city: "",
+          address: "",
+          zip: "",
+        });
+        dispatch({
+          type: mainTypes.SIGN_UP_SUCCESS,
+          payload: true,
+        });
+        setCurrentUser(userCredential.user)
+      })
+      .catch((error) => {
+        console.log("error Line 51", error);
+        dispatch({
+          type: mainTypes.AUTH_ERROR,
+          payload: error.message,
+        });
+      });
+    
   };
 export const resetAuthSuccess = () => ({
   type: mainTypes.RESET_AUTH_STATE,
