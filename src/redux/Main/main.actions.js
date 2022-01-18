@@ -1,19 +1,32 @@
 import mainTypes from "./main.types";
 // import { auth, db, storage } from "../../firebase/utils";
 import { auth, db } from "../../firebase/utils";
+<<<<<<< HEAD
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+=======
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, addDoc, setDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+>>>>>>> 79d6bccc1bd5d41e97d9b197e2599febb924d016
 import { doc, addDoc } from "firebase/firestore";
 
 // AUTH
-export const setCurrentUser = () => ({
+export const setCurrentUser = (props) => ({
   type: mainTypes.CURRENT_USER,
-  payload: true,
+  payload: props,
 });
 
+<<<<<<< HEAD
 // export const signOutUser = () => ({
 //   type: mainTypes.CURRENT_USER,
 //   payload: false,
 // });
+=======
+export const signOutUser = () => ({
+  type: mainTypes.CURRENT_USER,
+  payload: null,
+});
+>>>>>>> 79d6bccc1bd5d41e97d9b197e2599febb924d016
 
 export const signInUser =
   ({ email, password }) =>
@@ -42,10 +55,37 @@ export const signUpUser =
   ({ fname, email, password, type }) =>
   async (dispatch) => {
     console.log("Props from signUpUser ", { fname, email, password, type });
-    // dispatch({
-    //   type: mainTypes.SIGN_UP_SUCCESS,
-    //   payload: true,
-    // });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log("userCredential ", userCredential);
+        let kind = "";
+        if (type === "1") kind = "shipper";
+        if (type === "2") kind = "carrier";
+        setDoc(doc(db, kind, email), {
+          username: fname,
+          email: email,
+          password: password,
+          kind: kind,
+          phone: "",
+          country: "",
+          city: "",
+          address: "",
+          zip: "",
+        });
+        dispatch({
+          type: mainTypes.SIGN_UP_SUCCESS,
+          payload: true,
+        });
+        setCurrentUser(userCredential.user)
+      })
+      .catch((error) => {
+        console.log("error Line 51", error);
+        dispatch({
+          type: mainTypes.AUTH_ERROR,
+          payload: error.message,
+        });
+      });
+    
   };
 export const resetAuthSuccess = () => ({
   type: mainTypes.RESET_AUTH_STATE,

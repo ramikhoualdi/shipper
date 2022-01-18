@@ -7,39 +7,17 @@ const INITIAL_STATE = {
   signUpSuccess: false,
   recoveryPasswordSuccess: false,
   fetchUserD: null,
-  errors: [],
+  errors: null,
 };
-
-// const mainSlice = createSlice({
-//   name: 'main',
-//   initialState: {
-//     INITIAL_STATE,
-//   },
-//   reducers: {
-//     incremented: state => {
-//       // Redux Toolkit allows us to write "mutating" logic in reducers. It
-//       // doesn't actually mutate the state because it uses the Immer library,
-//       // which detects changes to a "draft state" and produces a brand new
-//       // immutable state based off those changes
-//       state.value += 1
-//     },
-//     decremented: state => {
-//       state.value -= 1
-//     }
-//   }
-// })
-
-// export const { incremented, decremented } = counterSlice.actions
-
-// const store = configureStore({
-//   reducer: counterSlice.reducer
-// })
-
-// 
 
 const mainReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     // AUTH
+    case mainTypes.SET_CURRENT:
+      return {
+        ...state,
+        currentUser: action.payload,
+      };
     case mainTypes.SIGN_IN_SUCCESS:
       console.log("hello there")
       return {
@@ -60,6 +38,11 @@ const mainReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         fetchUserD: action.payload,
+      };
+    case mainTypes.AUTH_ERROR:
+      return {
+        ...state,
+        errors: action.payload,
       };
     case mainTypes.RESET_AUTH_STATE:
       return {
