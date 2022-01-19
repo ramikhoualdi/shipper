@@ -20,6 +20,7 @@ import Recovery from "./components/pages/Recovery/Recovery";
 import Carrier from "./components/pages/Carrier/Carrier";
 // Shipper
 import Shipper from "./components/pages/Shipper/Shipper";
+import IndexShipper from "./components/pages/Shipper/IndexShipper";
 
 const App = () => {
   return (
@@ -64,7 +65,7 @@ const App = () => {
         </Route>
         {/* Shipper Home Page */}
         <Route exact path="/shipper">
-          <Shipper />
+          <IndexShipper />
         </Route>
         {/* Carrier Home Page */}
         <Route exact path="/carrier">

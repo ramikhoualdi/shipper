@@ -3,15 +3,15 @@ import "./styles.css";
 // import { useSelector } from 'react-redux'
 
 const Navbar = () => {
-  let userS = false
-  let userC = false
+  let userS = false;
+  let userC = false;
 
   return (
     <div className="navbar">
       <div className="container">
         <div className="inner">
           <div className="logo">
-            <Link exact to="/">
+            <Link to="/">
               <img
                 src={process.env.PUBLIC_URL + "/images/logo.png"}
                 alt="logo"
