@@ -1,14 +1,13 @@
 import mainTypes from "./main.types";
 // import { auth, db, storage } from "../../firebase/utils";
 import { auth, db } from "../../firebase/utils";
-<<<<<<< HEAD
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
-=======
-import { createUserWithEmailAndPassword } from "firebase/auth";
+
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 import { doc, addDoc, setDoc } from "firebase/firestore";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
->>>>>>> 79d6bccc1bd5d41e97d9b197e2599febb924d016
-import { doc, addDoc } from "firebase/firestore";
 
 // AUTH
 export const setCurrentUser = (props) => ({
@@ -16,17 +15,15 @@ export const setCurrentUser = (props) => ({
   payload: props,
 });
 
-<<<<<<< HEAD
 // export const signOutUser = () => ({
 //   type: mainTypes.CURRENT_USER,
 //   payload: false,
 // });
-=======
-export const signOutUser = () => ({
-  type: mainTypes.CURRENT_USER,
-  payload: null,
-});
->>>>>>> 79d6bccc1bd5d41e97d9b197e2599febb924d016
+
+// export const signOutUser = () => ({
+//   type: mainTypes.CURRENT_USER,
+//   payload: null,
+// });
 
 export const signInUser =
   ({ email, password }) =>
@@ -48,8 +45,6 @@ export const signInUser =
       console.log(err);
     }
   };
-
-
 
 export const signUpUser =
   ({ fname, email, password, type }) =>
@@ -76,7 +71,7 @@ export const signUpUser =
           type: mainTypes.SIGN_UP_SUCCESS,
           payload: true,
         });
-        setCurrentUser(userCredential.user)
+        setCurrentUser(userCredential.user);
       })
       .catch((error) => {
         console.log("error Line 51", error);
@@ -85,12 +80,10 @@ export const signUpUser =
           payload: error.message,
         });
       });
-    
   };
 export const resetAuthSuccess = () => ({
   type: mainTypes.RESET_AUTH_STATE,
 });
-
 
 export const signOutUser = () => async (dispatch) => {
   try {
@@ -106,12 +99,6 @@ export const signOutUser = () => async (dispatch) => {
     console.log(err);
   }
 };
-
-
-
-
-
-
 
 export const signUp = (name, email, password, type) => async (dispatch) => {
   console.log("HERE main action Sign Up");

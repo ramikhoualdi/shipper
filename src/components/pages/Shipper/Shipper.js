@@ -10,25 +10,12 @@ import "./styles.css";
 import GoogleMapReact from "google-map-react";
 import { useEffect, useState } from "react";
 import { usePlacesWidget } from "react-google-autocomplete";
-<<<<<<< HEAD
 import { signOutUser } from "../../../redux/Main/main.actions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-=======
-import { useDispatch, useSelector } from "react-redux";
-
-const mapState = ({ main }) => ({
-  currentUser: main.currentUser,
-  errors: main.errors,
-});
-
->>>>>>> 79d6bccc1bd5d41e97d9b197e2599febb924d016
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Shipper = ({ user }) => {
-  const { currentUser, errors } = useSelector(mapState);
-  console.log("Hoeme Page");
-  console.log(currentUser, errors);
   const [valid, setValid] = useState(false);
   const { ref } = usePlacesWidget({
     apiKey: "AIzaSyCYm0h7nJW8k0O-IPU4T3cKROKXWoBuy9A",
@@ -47,7 +34,6 @@ const Shipper = ({ user }) => {
   const toggleSidebar = () => {
     console.log("Toggle Sidebar !");
     setValid(!valid);
-<<<<<<< HEAD
   };
 
   const dispatch = useDispatch();
@@ -55,8 +41,6 @@ const Shipper = ({ user }) => {
   const logOut = () => {
     dispatch(signOutUser());
     history.push("/signinshipper");
-=======
->>>>>>> 79d6bccc1bd5d41e97d9b197e2599febb924d016
   };
   const zoom = 11;
   return (
