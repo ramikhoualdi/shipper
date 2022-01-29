@@ -15,15 +15,15 @@ const List = () => {
   const [type, setType] = useState("oussama");
   const [rating, setRating] = useState("");
   const places = [
-    { name: "Cool Place" },
-    { name: "Cool Beer" },
-    { name: "Cool Steak" },
-    { name: "Cool Place" },
-    { name: "Cool Beer" },
-    { name: "Cool Steak" },
-    { name: "Cool Place" },
-    { name: "Cool Beer" },
-    { name: "Cool Steak" },
+    { name: "Carrier 1" },
+    { name: "Carrier 2" },
+    { name: "Carrier 3" },
+    { name: "Carrier 4" },
+    { name: "Carrier 5" },
+    { name: "Carrier 6" },
+    { name: "Carrier 7" },
+    { name: "Carrier 8" },
+    { name: "Carrier 9" },
   ];
   return (
     <div className={classes.container}>
