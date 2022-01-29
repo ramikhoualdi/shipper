@@ -12,12 +12,20 @@ import GoogleMapReact from "google-map-react";
 // import Rating from "@material-ui/lab";
 
 import useStyles from "./styles";
+<<<<<<< HEAD
 
 const Shipper = ({ user }) => {
   // const [valid, setValid] = useState(false);
   const classes = useStyles();
   // const isMobile = useMediaQuery("(min-width:600)");
   const coordinates = { lat: 0, lng: 0 };
+=======
+// oussama1998ggapi azerty1998
+const Shipper = ({ user, setCoordinates, setBounds, coordinates }) => {
+  const [valid, setValid] = useState(false);
+  const classes = useStyles();
+  const isMobile = useMediaQuery("(min-width:600)");
+>>>>>>> 7f01a90170225e44dc011af390d5958235f0eb15
 
   // const toggleSidebar = () => {
   //   console.log("Toggle Sidebar !");
@@ -35,15 +43,21 @@ const Shipper = ({ user }) => {
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
+<<<<<<< HEAD
         // bootstrapURLKeys={{ key: "AIzaSyCia2LB-2uQ-LsDWZOLHDkzqinHxwZrqEQ" }}
         // bootstrapURLKeys={{ key: "AIzaSyBnOGp0Dx1ezNbGEmVdqe8G_9GlSqnnxtM" }}
+=======
+>>>>>>> 7f01a90170225e44dc011af390d5958235f0eb15
         bootstrapURLKeys={{ key: "AIzaSyDu4220ohlstEdfL47tpCPh9lo0MtwN13Q" }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
         options={""}
-        onChange={""}
+        onChange={(e) => {
+          setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+          setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.se });
+        }}
         onChildClick={""}
       ></GoogleMapReact>
     </div>

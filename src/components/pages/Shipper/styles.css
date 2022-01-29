@@ -14,6 +14,7 @@
 .profileName {
   font-size: 12px;
 }
+<<<<<<< HEAD
 .MuiGrid-spacing-xs-3 {
   margin: 0 !important;
 }
@@ -21,3 +22,16 @@
   padding: 0 !important;
   margin: 0 !important;
 }
+=======
+
+.makeStyles-mapContainer-2
+{
+  height: 100vh!important;
+}
+
+
+
+/*
+<iframe src="https://www.google.com/maps/d/embed?mid=18fyyXsqD4A-nY2T1KqHzve1z9qg&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
+*/
+>>>>>>> 7f01a90170225e44dc011af390d5958235f0eb15
