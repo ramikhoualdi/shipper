@@ -19,7 +19,7 @@ import Recovery from "./components/pages/Recovery/Recovery";
 // Carrier
 import Carrier from "./components/pages/Carrier/Carrier";
 // Shipper
-import Shipper from "./components/pages/Shipper/Shipper";
+// import Shipper from "./components/pages/Shipper/Shipper";
 import IndexShipper from "./components/pages/Shipper/IndexShipper";
 
 const App = () => {

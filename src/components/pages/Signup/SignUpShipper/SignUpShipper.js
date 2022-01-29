@@ -47,7 +47,7 @@ const SignUpShipper = () => {
       }
       setVisible(true);
     }
-  }, [signUpSuccess, errors]);
+  }, [signUpSuccess, errors, history, dispatch]);
 
   const handleSubmit = async () => {
     let check = true;

@@ -1,58 +1,60 @@
-import React, { useState } from "react";
-import {
-  CircularProgress,
-  Grid,
-  Typography,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  Select,
-} from "@material-ui/core";
+import React from "react";
+import HeaderModel from "./HeaderModel";
 import useStyles from "./ListStyles";
-import PlaceDetails from "./PlaceDetails";
-const List = () => {
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Profile from "./screens/Profile/Profile";
+import Home from "./screens/Home";
+const ListContent = () => {
   const classes = useStyles();
-  const [type, setType] = useState("oussama");
-  const [rating, setRating] = useState("");
-  const places = [
-    { name: "Cool Place" },
-    { name: "Cool Beer" },
-    { name: "Cool Steak" },
-    { name: "Cool Place" },
-    { name: "Cool Beer" },
-    { name: "Cool Steak" },
-    { name: "Cool Place" },
-    { name: "Cool Beer" },
-    { name: "Cool Steak" },
-  ];
   return (
     <div className={classes.container}>
-      <Typography variant="h4">Carrier And Shipper</Typography>
-      <FormControl className={classes.formControl}>
-        <InputLabel>Type</InputLabel>
-        <Select value={type} onChange={(e) => setType(e.target.value)}>
-          <MenuItem value="oussama">Oussama</MenuItem>
-          <MenuItem value="kunal">Kunal</MenuItem>
-          <MenuItem value="rami">Rami</MenuItem>
-        </Select>
-      </FormControl>
-      <FormControl className={classes.formControl}>
-        <InputLabel>Rating</InputLabel>
-        <Select value={rating} onChange={(e) => setRating(e.target.value)}>
-          <MenuItem value={0}>All</MenuItem>
-          <MenuItem value={3}>Above 3.0</MenuItem>
-          <MenuItem value={4}>Above 4.0</MenuItem>
-          <MenuItem value={4.5}>Above 4.5</MenuItem>
-        </Select>
-      </FormControl>
-      <Grid container spacing={3} className={classes.list}>
-        {places?.map((place, i) => (
-          <Grid item key={i} xs={12}>
-            <PlaceDetails place={place} />
-          </Grid>
-        ))}
-      </Grid>
+      <Home />
+      {/* <Switch>
+        <Route path="/logout">
+          <HeaderModel title="Logout" />
+          <Profile />
+        </Route>
+        <Route path="/support">
+          <HeaderModel title="Onlnine Support" />
+          <Profile />
+        </Route>
+        <Route path="/settings">
+          <HeaderModel title="Settings" />
+          <Profile />
+        </Route>
+        <Route path="/promo">
+          <HeaderModel title="Apply Promo Code" />
+          <Profile />
+        </Route>
+        <Route path="/addresses">
+          <HeaderModel title="My Addresses" />
+          <Profile />
+        </Route>
+        <Route path="/history">
+          <HeaderModel title="History" />
+          <Profile />
+        </Route>
+        <Route path="/payments">
+          <HeaderModel title="Payment Methods" />
+          <Profile />
+        </Route>
+        <Route path="/profile">
+          <HeaderModel title="Profile" />
+          <Profile />
+        </Route>
+        <Route path="/">
+          
+        </Route>
+      </Switch> */}
     </div>
+  );
+};
+
+const List = () => {
+  return (
+    <Router>
+      <ListContent />
+    </Router>
   );
 };
 

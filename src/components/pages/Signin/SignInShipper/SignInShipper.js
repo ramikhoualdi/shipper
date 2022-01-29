@@ -32,7 +32,7 @@ const SignInShipper = () => {
     if (signInSuccess){
       history.push("/shipper");
     }
-  }, [currentUser, signInSuccess, errors]);
+  }, [currentUser, signInSuccess, errors, history]);
 
   const handleSubmit = async () => {
     let check = true;
