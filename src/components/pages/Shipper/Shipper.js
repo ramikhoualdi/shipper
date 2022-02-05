@@ -12,20 +12,12 @@ import GoogleMapReact from "google-map-react";
 // import Rating from "@material-ui/lab";
 
 import useStyles from "./styles";
-<<<<<<< HEAD
 
-const Shipper = ({ user }) => {
+// oussama1998ggapi azerty1998
+const Shipper = ({ user, setCoordinates, setBounds, coordinates }) => {
   // const [valid, setValid] = useState(false);
   const classes = useStyles();
   // const isMobile = useMediaQuery("(min-width:600)");
-  const coordinates = { lat: 0, lng: 0 };
-=======
-// oussama1998ggapi azerty1998
-const Shipper = ({ user, setCoordinates, setBounds, coordinates }) => {
-  const [valid, setValid] = useState(false);
-  const classes = useStyles();
-  const isMobile = useMediaQuery("(min-width:600)");
->>>>>>> 7f01a90170225e44dc011af390d5958235f0eb15
 
   // const toggleSidebar = () => {
   //   console.log("Toggle Sidebar !");
@@ -43,11 +35,6 @@ const Shipper = ({ user, setCoordinates, setBounds, coordinates }) => {
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
-<<<<<<< HEAD
-        // bootstrapURLKeys={{ key: "AIzaSyCia2LB-2uQ-LsDWZOLHDkzqinHxwZrqEQ" }}
-        // bootstrapURLKeys={{ key: "AIzaSyBnOGp0Dx1ezNbGEmVdqe8G_9GlSqnnxtM" }}
-=======
->>>>>>> 7f01a90170225e44dc011af390d5958235f0eb15
         bootstrapURLKeys={{ key: "AIzaSyDu4220ohlstEdfL47tpCPh9lo0MtwN13Q" }}
         defaultCenter={coordinates}
         center={coordinates}
